@@ -1,7 +1,5 @@
-// this should take the hero content data package, and render it..
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlay, faInfoCircle } from "@fortawesome/free-solid-svg-icons"
-
+import Button from "./Button";
 
 const HeroContent = ({ title, subtitle, imageUrl, description }) => {
 
@@ -15,16 +13,10 @@ const HeroContent = ({ title, subtitle, imageUrl, description }) => {
         </p>
         <ul className="controls">
             <li>
-                <button className="primary-action">
-                    <FontAwesomeIcon icon={faPlay} />
-                    <span>Drink</span>
-                </button>
+                <Button className="primary-action" label="Drink" icon={faPlay} />
             </li>
             <li>
-                <button className="secondary-action">
-                    <FontAwesomeIcon icon={faInfoCircle} />
-                    <span>More Info</span>
-                </button>
+                <Button className="secondary-action" label="More Info" icon={faInfoCircle} />
             </li>
         </ul>
     </div>
